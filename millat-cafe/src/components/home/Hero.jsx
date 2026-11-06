@@ -1,0 +1,15 @@
+import { m } from 'framer-motion';
+import { Clock, Coffee, Star } from 'lucide-react';
+import { Button } from '../ui/Button';
+
+const hero = 'https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=1000&q=85';
+export function Hero() {
+  return <section className="hero-shell pb-20 pt-24 md:pb-28"><div className="container-site grid items-center gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
+    <m.div className="relative order-1 lg:order-2" initial={{ opacity: 0, scale: 1.06 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, ease: [0.22,1,.36,1] }}>
+      <picture><source srcSet={`${hero}&fm=avif`} type="image/avif"/><source srcSet={`${hero}&fm=webp`} type="image/webp"/><img className="hero-image" src={hero} alt="Barista pouring latte art into a freshly brewed coffee" width="900" height="1100" fetchPriority="high"/></picture>
+      <svg className="absolute -top-9 left-1/2 h-16 w-24 -translate-x-1/2 text-mocha" viewBox="0 0 100 70" fill="none" aria-hidden><path className="steam" d="M30 62C10 42 53 38 30 8" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/><path className="steam" d="M64 62C43 40 84 34 66 4" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg>
+      <div className="hero-card -left-2 bottom-20 md:left-3"><Coffee size={18} className="text-caramel"/> Fresh roasted</div><div className="hero-card right-0 top-16" style={{ animationDelay: '.8s' }}><Clock size={18} className="text-caramel"/> Open until 11 PM</div><div className="hero-card bottom-5 right-4" style={{ animationDelay: '1.4s' }}><Star size={18} className="text-gold" fill="currentColor"/> 4.8 guest love</div>
+    </m.div>
+    <div className="order-2 lg:order-1"><m.div className="mb-4 inline-flex rounded-full border border-caramel/30 bg-white/55 px-4 py-2 text-sm font-semibold" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>☕ Freshly Brewed Since 2020</m.div><h1 className="mb-5 text-balance">{['Sweet Moments', 'Start Here.'].map((line, i) => <span key={line} className="block overflow-hidden"><m.span className="block" initial={{ y: '105%' }} animate={{ y: 0 }} transition={{ duration: .8, delay: .1 + i * .12, ease: [0.22,1,.36,1] }}>{line}</m.span></span>)}</h1><m.p className="mb-7 max-w-lg text-lg text-muted" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .45 }}>Handcrafted coffee, fresh bakes and unhurried conversations—served warm, every day.</m.p><m.div className="grid gap-3 sm:flex" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .55 }}><Button to="/menu">Explore Menu</Button><Button to="/contact" variant="secondary">Visit Us</Button></m.div><div className="mt-7 flex flex-wrap gap-x-3 gap-y-1 text-xs font-semibold text-muted"><span>4.8★ Rated</span><span>•</span><span>2,000+ smiles served</span><span>•</span><span>Fresh daily</span></div></div>
+  </div><svg className="wave-divider" preserveAspectRatio="none" viewBox="0 0 1440 70" fill="currentColor" aria-hidden><path d="M0 42C210 86 350 8 566 32c218 24 340 55 548 12 125-26 226-16 326 1v25H0Z"/></svg></section>;
+}

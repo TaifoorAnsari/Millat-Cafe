@@ -1,0 +1,5 @@
+import { gallery } from '../../data/gallery';
+import { Button } from '../ui/Button';
+import { Reveal } from '../ui/Reveal';
+import { SectionHeading } from '../ui/SectionHeading';
+export function GalleryPreview() { return <section className="section-pad"><div className="container-site"><SectionHeading eyebrow="A look inside" title="Made for Good Moments" subtitle="Coffee in motion, pastries at their best, and corners that invite you to stay."/><div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4 md:grid-rows-2">{gallery.slice(0, 6).map((item, i) => <Reveal key={item.id} delay={i * .05} className={`${i === 0 ? 'md:col-span-2 md:row-span-2' : ''} ${i === 5 ? 'md:col-span-2' : ''} overflow-hidden rounded-image`}><img className="h-full min-h-44 w-full object-cover transition-transform duration-700 hover:scale-105" src={item.src} alt={item.title} width="700" height="700" loading="lazy" decoding="async"/></Reveal>)}</div><div className="mt-8"><Button to="/gallery">See Full Gallery</Button></div></div></section>; }

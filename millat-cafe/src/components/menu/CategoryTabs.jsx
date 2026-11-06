@@ -1,0 +1,3 @@
+import { m } from 'framer-motion';
+import { categories } from '../../data/menu';
+export function CategoryTabs({ active, onChange }) { return <div className="hide-scrollbar -mx-5 flex snap-x gap-2 overflow-x-auto px-5 py-3 md:mx-0 md:px-0" role="tablist" aria-label="Menu categories">{categories.map((category) => <button key={category} className={`relative min-h-11 shrink-0 snap-start rounded-full px-5 text-sm font-semibold ${active === category ? 'text-cream' : 'bg-white text-espresso'}`} onClick={() => onChange(category)} role="tab" aria-selected={active === category}><span className="relative z-10">{category}</span>{active === category && <m.span layoutId="active-category" className="absolute inset-0 rounded-full bg-espresso"/>}</button>)}</div>; }

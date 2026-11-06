@@ -1,0 +1,3 @@
+import { m } from 'framer-motion';
+const filters = ['All', 'Coffee', 'Food', 'Ambience', 'Events'];
+export function GalleryFilters({ active, onChange }) { return <div className="hide-scrollbar flex gap-2 overflow-x-auto" role="tablist" aria-label="Gallery filters">{filters.map((filter) => <button key={filter} onClick={() => onChange(filter)} className={`relative min-h-11 shrink-0 rounded-full px-5 font-semibold ${active === filter ? 'text-cream' : 'bg-white'}`} role="tab" aria-selected={active === filter}><span className="relative z-10">{filter}</span>{active === filter && <m.span layoutId="gallery-filter" className="absolute inset-0 rounded-full bg-espresso"/>}</button>)}</div>; }

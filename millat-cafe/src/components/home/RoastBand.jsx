@@ -1,0 +1,7 @@
+import { Reveal } from '../ui/Reveal';
+const rows = [
+  ['LIGHT ROAST', 'Floral, bright & lively', 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=500&q=80'],
+  ['MEDIUM ROAST', 'Caramel, balanced & smooth', 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80'],
+  ['DARK ROAST', 'Chocolate, bold & lingering', 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=500&q=80'],
+];
+export function RoastBand() { return <section className="section-pad bg-espresso text-cream"><div className="container-site"><div className="mb-10 text-gold text-sm font-bold uppercase tracking-[.2em]">Find your coffee mood</div>{rows.map(([name, copy, image], i) => <Reveal key={name} delay={i * .07} className="group grid grid-cols-[76px_1fr] items-center gap-5 border-t border-cream/15 py-5 last:border-b md:grid-cols-[110px_1fr_auto] md:py-7"><img className="h-16 w-16 rounded-full object-cover transition-transform duration-500 group-hover:rotate-6 md:h-24 md:w-24" src={image} alt="" width="160" height="160" loading="lazy"/><div><h3 className="mb-1 font-accent text-[clamp(1.25rem,4vw,3rem)] font-extrabold tracking-tight transition-transform duration-300 group-hover:translate-x-2">{name}</h3><p className="mb-0 text-sm text-cream/55">{copy}</p></div><span className="hidden text-cream/30 md:block">0{i + 1}</span></Reveal>)}</div></section>; }

@@ -1,0 +1,38 @@
+const img = (id, width = 700) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=78`;
+
+export const categories = ['All', 'Hot Coffee', 'Cold Coffee', 'Tea & Chai', 'Shakes & Smoothies', 'Desserts', 'Snacks & Sandwiches', 'Breakfast'];
+
+export const menu = [
+  { id: 1, name: 'Classic Espresso', category: 'Hot Coffee', description: 'A rich, syrupy double shot with a cocoa finish.', price: 120, image: img('photo-1510707577719-ae7c14805e3a'), tags: ['Bestseller'], veg: true, sizes: [{ label: 'S', price: 120 }, { label: 'D', price: 160 }] },
+  { id: 2, name: 'Velvet Cappuccino', category: 'Hot Coffee', description: 'Espresso, steamed milk and a cloud of fine foam.', price: 180, image: img('photo-1572442388796-11668a67e53d'), tags: ['Bestseller'], veg: true },
+  { id: 3, name: 'Hazelnut Latte', category: 'Hot Coffee', description: 'Toasty hazelnut folded into creamy espresso.', price: 220, image: img('photo-1485808191679-5f86510681a2'), tags: ['Bestseller'], veg: true },
+  { id: 4, name: 'Caramel Macchiato', category: 'Hot Coffee', description: 'Vanilla milk, espresso and a caramel ribbon.', price: 230, image: img('photo-1461023058943-07fcbe16d735'), tags: ['New'], veg: true },
+  { id: 5, name: 'Belgian Hot Chocolate', category: 'Hot Coffee', description: 'Dark Belgian chocolate, milk and soft cream.', price: 240, image: img('photo-1542990253-0d0f5be5f0ed'), tags: ['Bestseller'], veg: true },
+  { id: 6, name: 'Flat White', category: 'Hot Coffee', description: 'Double ristretto with silky microfoam.', price: 195, image: img('photo-1497636577773-f1231844b336'), tags: [], veg: true },
+  { id: 7, name: 'Millat Cold Coffee', category: 'Cold Coffee', description: 'Our signature frothy coffee, chilled and bold.', price: 200, image: img('photo-1517701604599-bb29b565090c'), tags: ['Bestseller'], veg: true, sizes: [{ label: 'M', price: 200 }, { label: 'L', price: 245 }] },
+  { id: 8, name: 'Irish Cold Brew', category: 'Cold Coffee', description: 'Slow-steeped coffee with smooth Irish cream notes.', price: 240, image: img('photo-1461023058943-07fcbe16d735'), tags: ['New'], veg: true },
+  { id: 9, name: 'Salted Caramel Frappe', category: 'Cold Coffee', description: 'Blended coffee, caramel and a tiny pinch of sea salt.', price: 260, image: img('photo-1572490122747-3968b75cc699'), tags: ['Bestseller'], veg: true },
+  { id: 10, name: 'Coffee Tonic', category: 'Cold Coffee', description: 'Espresso, tonic and orange over ice.', price: 220, image: img('photo-1517959105821-eaf2591984ca'), tags: ['New', 'Sugar-free'], veg: true },
+  { id: 11, name: 'Masala Chai', category: 'Tea & Chai', description: 'Ginger, cardamom and house spices simmered with milk.', price: 80, image: img('photo-1571934811356-5cc061b6821f'), tags: ['Bestseller'], veg: true },
+  { id: 12, name: 'Kesar Elaichi Chai', category: 'Tea & Chai', description: 'Saffron and green cardamom in a fragrant milk tea.', price: 110, image: img('photo-1561336526-2914f13ceb36'), tags: ['New'], veg: true },
+  { id: 13, name: 'Kashmiri Kahwa', category: 'Tea & Chai', description: 'Green tea, cinnamon, saffron and almond slivers.', price: 150, image: img('photo-1594631252845-29fc4cc8cde9'), tags: ['Sugar-free'], veg: true },
+  { id: 14, name: 'Peach Iced Tea', category: 'Tea & Chai', description: 'Black tea with ripe peach and fresh lemon.', price: 160, image: img('photo-1556679343-c7306c1976bc'), tags: [], veg: true },
+  { id: 15, name: 'Oreo Thick Shake', category: 'Shakes & Smoothies', description: 'Cookies, vanilla ice cream and chilled milk.', price: 240, image: img('photo-1577805947697-89e18249d767'), tags: ['Bestseller'], veg: true },
+  { id: 16, name: 'Mango Almond Smoothie', category: 'Shakes & Smoothies', description: 'Mango, almond milk and yoghurt blended smooth.', price: 230, image: img('photo-1623065422902-30a2d299bbe4'), tags: ['New'], veg: true },
+  { id: 17, name: 'Berry Banana Smoothie', category: 'Shakes & Smoothies', description: 'Mixed berries, banana, yoghurt and chia.', price: 250, image: img('photo-1553530666-ba11a7da3888'), tags: ['Sugar-free'], veg: true },
+  { id: 18, name: 'Nutella Shake', category: 'Shakes & Smoothies', description: 'A creamy chocolate-hazelnut indulgence.', price: 270, image: img('photo-1579954115545-a95591f28bfc'), tags: ['Bestseller'], veg: true },
+  { id: 19, name: 'Blueberry Cheesecake', category: 'Desserts', description: 'Silky baked cheesecake with a bright berry compote.', price: 240, image: img('photo-1533134242443-d4fd215305ad'), tags: ['Bestseller'], veg: true },
+  { id: 20, name: 'Fudge Brownie', category: 'Desserts', description: 'Dense dark chocolate brownie, served warm.', price: 150, image: img('photo-1606313564200-e75d5e30476c'), tags: ['Bestseller'], veg: true },
+  { id: 21, name: 'Nutella Waffle', category: 'Desserts', description: 'Crisp waffle, chocolate-hazelnut spread and berries.', price: 260, image: img('photo-1562376552-0d160a2f238d'), tags: ['New'], veg: true },
+  { id: 22, name: 'Lotus Biscoff Jar', category: 'Desserts', description: 'Layers of mousse, caramel biscuit and cream.', price: 230, image: img('photo-1551024601-bec78aea704b'), tags: ['New'], veg: true },
+  { id: 23, name: 'Tiramisu', category: 'Desserts', description: 'Espresso-soaked sponge and mascarpone cream.', price: 250, image: img('photo-1571877227200-a0d98ea607e9'), tags: [], veg: true },
+  { id: 24, name: 'Paneer Tikka Sandwich', category: 'Snacks & Sandwiches', description: 'Smoky paneer, mint spread and crunchy vegetables.', price: 220, image: img('photo-1528735602780-2552fd46c7af'), tags: ['Bestseller', 'Spicy'], veg: true },
+  { id: 25, name: 'Chicken Club Sandwich', category: 'Snacks & Sandwiches', description: 'Grilled chicken, egg, lettuce and pepper mayo.', price: 280, image: img('photo-1553909489-cd47e0907980'), tags: ['Bestseller'], veg: false },
+  { id: 26, name: 'Peri Peri Fries', category: 'Snacks & Sandwiches', description: 'Crisp fries tossed in a fiery house spice.', price: 150, image: img('photo-1573080496219-bb080dd4f877'), tags: ['Spicy'], veg: true },
+  { id: 27, name: 'Cheesy Garlic Bread', category: 'Snacks & Sandwiches', description: 'Toasted herb bread with molten mozzarella.', price: 180, image: img('photo-1573140247632-f8fd74997d5c'), tags: [], veg: true },
+  { id: 28, name: 'Loaded Chicken Nachos', category: 'Snacks & Sandwiches', description: 'Corn chips, spiced chicken, cheese and salsa.', price: 290, image: img('photo-1513456852971-30c0b8199d4d'), tags: ['Spicy', 'New'], veg: false },
+  { id: 29, name: 'Classic French Toast', category: 'Breakfast', description: 'Brioche, cinnamon custard, fruit and maple.', price: 220, image: img('photo-1484723091739-30a097e8f929'), tags: ['Bestseller'], veg: true },
+  { id: 30, name: 'Masala Omelette Toast', category: 'Breakfast', description: 'Three-egg omelette with chilli, onion and toast.', price: 190, image: img('photo-1525351484163-7529414344d8'), tags: ['Spicy'], veg: false },
+  { id: 31, name: 'Avocado Chilli Toast', category: 'Breakfast', description: 'Smashed avocado, chilli, lime and seeded sourdough.', price: 260, image: img('photo-1541519227354-08fa5d50c44d'), tags: ['New'], veg: true },
+  { id: 32, name: 'Breakfast Croissant', category: 'Breakfast', description: 'Buttery croissant with egg, cheese and tomato.', price: 230, image: img('photo-1509440159596-0249088772ff'), tags: [], veg: false },
+];

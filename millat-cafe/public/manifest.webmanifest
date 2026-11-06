@@ -1,0 +1,9 @@
+{
+  "name": "Millat Cafe",
+  "short_name": "Millat",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F1E8",
+  "theme_color": "#F7F1E8",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
